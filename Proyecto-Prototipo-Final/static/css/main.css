@@ -1,0 +1,96 @@
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    height: 100%;
+    background-image: url(/static/images/medico.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.footer {
+    background: linear-gradient(#6dd5ed, #1367b6);
+    color: rgb(0, 0, 0);
+    height:160px;
+    position: relative;
+}
+
+.footer .footer-content {
+    height: 160px;
+    display: flex;
+}
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid white;
+}
+
+.footer .footer-bottom {
+    color: black;
+    font-size: 0.8rem;
+    background-color: rgb(33, 132, 199);
+    height: 19px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+}
+
+
+.logorevisalud {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: calc(437px*0.28);
+    width: calc(467px*0.28);
+}
+.logoname{
+    height: calc(102px*0.43);
+    width: calc(469px*0.43);
+}
+
+
+.menu, .address {
+    padding-top: 12px;
+    padding-bottom: 0px;
+}
+
+.address span, .menu span {
+    border-bottom: 1px solid #c7c7c7;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    padding: 10px 0px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.address li a, .menu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.address li, .menu li {
+    list-style: none;
+}
+
+.address li a:hover, .menu li a:hover {
+    color: #da3e44;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.address .fa {
+    color: #da3e44;
+    margin-right: 10px;
+}
