@@ -1,0 +1,11 @@
+{% extends "layout4.html" %}
+{% block title %}Cita Creada{% endblock %}
+{% block content%}
+<div class="jumbotron">
+    <h1 class="display-4">Nice!</h1>
+    <p class="lead">Cita creada correctamente</p>
+    <hr class="my-4">
+    <p>La cita ahora está disponible para ser reservada por los pacientes</p>
+    <a class="btn btn-primary btn-lg" href="/añadircita{{ medic }}" role="button">Crear Otra Cita</a>
+  </div>
+{% endblock %}

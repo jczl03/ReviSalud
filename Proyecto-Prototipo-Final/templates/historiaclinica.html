@@ -1,0 +1,31 @@
+{% extends "layout4.html" %}
+{% block title %}Historia Clínica{% endblock %}
+{% block content%}
+<div class="container p-5">
+    <div class="jumbotron" >
+        <h1 class="display-4"><b>Historias Clínicas</b></h1>
+        <hr class="my-4">
+        <h2>¿Que Quieres Hacer?</h2>
+        <div style="display:flex;justify-content:space-evenly;margin-top: 4vh;">
+            <div style="width: 44%; ">
+                <a style="width: 99%;height: 100%;" class="btn btn-primary btn-lg" href="/modificarhistoriaclinica{{ medic }}" role="button">
+                    <img style="height: 100px;width: 100px;margin:12px;"src="static/images/añadircita.png" alt="calendario" >
+                    <container style="">
+                        <h2>Modificar Historia Clínica</h2>
+                        <p >Añada notas medicas, antecedentes o edite talla y peso del paciente</p>
+                    </container>
+                </a>
+            </div>
+            <div style="width: 44%;">
+                <a style="width: 99%;height: 100%;"class="btn btn-primary btn-lg" href="/solicitarhistoria{{ medic }}" role="button">
+                    <img style="height: 100px;width: 100px;margin:12px;"src="static/images/historiaclinica.png" alt="calendariomas" > <!--añadir cita, con los circulos sin relleno xd -->
+                    <container style="">
+                        <h2>Ver Historia Clínica</h2>
+                        <p >Revise la historia clínica de un paciente de la clínica, ingresando su cc.</p>
+                    </container>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

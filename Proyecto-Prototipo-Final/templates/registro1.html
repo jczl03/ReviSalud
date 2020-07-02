@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}Registro{% endblock %}
+{% block content%}
+<form action="/validar_datos-validacion">
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h1 class="display-4"><b>Registro</b></h1>
+            <hr class="my-4">
+            <p>Confirme sus datos para registrarse en ReviSalud. Recuerde que estos datos ingresados deben coincidir por los dados en su ips</p>
+            Nombres: <input type="text" name="nombres"><br>
+            <p></p>
+            Apellidos: <input type="text" name="apellidos"><br>
+            <p></p> 
+            Cédula de ciudadania: <input type="text" name="cedula"><br>
+            <p></p>
+            <p>Sexo:
+            <input type="radio" id="Masculino" name="sexo" value="Masculino">
+            <label for="Masculino">Masculino</label>
+            <input type="radio" id="Femenino" name="sexo" value="Femenino">
+            <label for="Femenino">Femenino</label>
+            </p>
+            <p></p>
+            Edad: <input type="number" name="edad">
+            <p></p>
+            Fecha de nacimiendo : <input type="date" name="fecha_nacimiento"><br>
+            <input type='submit' value='Confirmar'>
+          </div>
+    </div>
+    </form>
+{% endblock %}

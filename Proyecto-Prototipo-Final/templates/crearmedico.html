@@ -1,0 +1,31 @@
+{% extends "layout2.html" %}
+{% block title %}Añadir Medico{% endblock %}
+{% block content%}
+<form action="/verificar_datosm">
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h2 ><b>Añadir Personal Médico</b></h2>
+            <hr class="my-4">
+            <label for="nombres">Nombres: </label>
+            <input type="text" name="nombres" required><br>
+            <p></p>
+            <label for="apellidos">Apellidos: </label>
+            <input type="text" name="apellidos" required><br>
+            <p></p> 
+            <label for="cc">Cédula de ciudadania: </label>
+            <input type="text" name="cc" required><br>
+            <p></p>
+            <label for="especialidad">Especialidad: </label>
+            {0}
+            <p></p>
+            <p>Sexo:
+            <input type="radio" id="Masculino" name="sexo" value="Masculino"required>
+            <label for="Masculino">Masculino</label>
+            <input type="radio" id="Femenino" name="sexo" value="Femenino" required>
+            <label for="Femenino">Femenino</label> </p>
+
+            <input type='submit' value='Suministrar Datos'>
+          </div>
+    </div>
+    </form>
+{% endblock %} 

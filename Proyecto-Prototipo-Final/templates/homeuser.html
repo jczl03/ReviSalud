@@ -1,0 +1,54 @@
+{% extends "layout3home.html" %}
+{% block title %}Home{% endblock %}
+{% block content%}
+    <div class="container p-5">
+        <div class="jumbotron" >
+            <h1 class="display-4" style="text-align: center;">Bienvenido(a), <b>{0}</b>  </h1>
+            <hr class="my-4">
+            <h2 style="text-align: center;">¿Que Quieres Hacer?</h2>
+            <p></p>
+            <div style="display:flex;justify-content:space-evenly;margin-top: 4vh;">
+                <div style="width: 44%; ">
+                    <a style="width: 99%;height: 100%;" class="btn btn-primary btn-lg" href="/miscitas{{ cc }}" role="button">
+                        <img style="height: 100px;width: 100px;margin:12px;"src="static/images/miscitas.png" alt="calendario" >
+                        <container style="">
+                            <h2>Ver Mis Citas</h2>
+                            <p >Revise la información de sus próximas citas programadas.</p>
+                        </container>
+                    </a>
+                </div>
+                <div style="width: 44%;">
+                    <a style="width: 99%;height: 100%;"class="btn btn-primary btn-lg" href="/citasdisponibles{{ cc }}" role="button">
+                        <img style="height: 100px;width: 100px;margin:12px;"src="static/images/añadircita.png" alt="calendariomas" >
+                        <container style="">
+                            <h2>Citas Médicas Disponibles</h2>
+                            <p >Agende su cita médica entre las citas disponibles de acuerdo a la especialidad y horario necesitado.</p>
+                        </container>
+                    </a>
+                </div>
+            </div>
+            <p></p>
+            <div style="display:flex;justify-content:space-evenly;margin-top: 4vh;">
+                <div style="width: 44%; ">
+                    <a style="width: 99%;height: 100%;" class="btn btn-primary btn-lg" href="/historiamedica{{ cc }}" role="button">
+                        <img style="height: 100px;width: 100px;margin:12px;"src="static/images/historiaclinica.png" alt="calendario" >
+                        <container style="">
+                            <h2>Ver Mi Historia Clínica</h2>
+                            <p >En su historia clínica podra ver, sus datos personales, los antecedentes y notas médicas añadidas de sus citas médicas.</p>
+                        </container>
+                    </a>
+                </div>
+                <div style="width: 44%;">
+                    <a style="width: 99%;height: 100%;"class="btn btn-primary btn-lg" href="/home_usercambiarcontraseña{{ cc }}" role="button">
+                        <img style="height: 100px;width: 100px;margin:12px;"src="static/images/contraseña.png" alt="calendariomas" >
+                        <container style="">
+                            <h2>Cambiar Contraseña</h2>
+                            <p >Cambie su contraseña para iniciar sesión en ReviSalud.</p>
+                        </container>
+                    </a>
+                </div>
+            </div>
+            <p></p>
+        </div>
+    </div>
+{% endblock %}

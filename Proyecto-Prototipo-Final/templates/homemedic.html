@@ -1,0 +1,45 @@
+{% extends "layout4home.html" %}
+{% block title %}Home-Personal Medico{% endblock %}
+{% block content%}
+<div class="container p-5">
+    <div class="jumbotron" >
+        <h1 class="display-4"><b>Bienvenido(a), {0}</b></h1>
+        <hr class="my-4">
+        <h2>¿Que Quieres Hacer?</h2>
+
+            <div style="display:flex;justify-content:space-evenly;margin-top: 4vh;">
+                <div style="width: 44%; ">
+                    <a style="width: 99%;height: 100%;" class="btn btn-primary btn-lg" href="/citasmedicasm{{ medic }}" role="button">
+                        <img style="height: 100px;width: 100px;margin:12px;"src="static/images/miscitas.png" alt="calendario" >
+                        <container style="">
+                            <h2>Mis Citas</h2>
+                            <p >Revise la información de sus próximas citas programadas y añada una o varias citas.</p>
+                        </container>
+                    </a>
+                </div>
+                <div style="width: 44%;">
+                    <a style="width: 99%;height: 100%;"class="btn btn-primary btn-lg" href="/historiaclinica{{ medic }}" role="button">
+                        <img style="height: 100px;width: 100px;margin:12px;"src="static/images/historiaclinica.png" alt="calendariomas" >
+                        <container style="">
+                            <h2>Historias Clínicas</h2>
+                            <p >Revisa las historias clínicas de los usuarios y puedes:editar peso y tallar, y añadir antecedentes y notas médicas</p>
+                        </container>
+                    </a>
+                </div>
+            </div>
+
+            <div style="display:flex;justify-content:space-evenly;margin-top: 4vh;">
+                <div style="width: 44%; ">
+                    <a style="width: 99%;height: 100%;" class="btn btn-primary btn-lg" href="/home_mediccambiarcontraseña{{ medic }}" role="button">
+                        <img style="height: 100px;width: 100px;margin:12px;"src="static/images/contraseña.png" alt="cambiarcontraseña" >
+                        <container style="">
+                            <h2>Cambiar Contraseña</h2>
+                            <p >Cambie su contraseña para iniciar sesión en ReviSalud.</p>
+                        </container>
+                    </a>
+                </div>
+            </div>
+        <p></p>
+    </div>
+</div>
+{% endblock %}

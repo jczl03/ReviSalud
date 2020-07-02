@@ -1,0 +1,26 @@
+{% extends "layout3.html" %}
+{% block title %}Filtrar citas{% endblock %}
+{% block content%}
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h1 style="text-align:center;">Seleccione los parametros para buscar citas que se adapten a ellos</h1>
+            <P>Si no desea filtrar por cierto parámetro, no llene el espacio.</P>
+            <hr class="my-4">
+            <form action="#" method="POST">
+            <label for="fecha">Desde: </label>
+            <input type="date" name="fecha" style="margin-right:40px;">
+            <label for="fechaf">Hasta: </label>
+            <input type="date" name="fechaf" style="margin-right:40px;">
+            <p></p>
+            <label for="medic">Médico: </label>
+            {}
+            <p></p>
+            <label for="especialidad">Especialidad: </label>
+            {}
+            <p></p>
+            <input type='submit' value='Filtrar'>
+            </form>
+          </div>
+    </div>
+    
+{% endblock %}

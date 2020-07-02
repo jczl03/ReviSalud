@@ -1,0 +1,10 @@
+{% extends "layout2.html" %}
+{% block title %}Upps{% endblock %}
+{% block content%}
+<div class="jumbotron">
+    <h1 class="display-4">Datos no válidos</h1>
+    <p class="lead">El usuario con la cc {0} ya ha sido registrado</p>
+    <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="/crear_usuario" role="button">Continuar añadiendo usuarios</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}Crear Contraseña{% endblock %}
+{% block content%}
+<form action='#' method="post" >
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h1 style="text-align:center;">Crear contraseña</h1>
+            <p>Digite una contraseña entre 8 y 16 dígitos</p>
+            <hr class="my-4">
+            Contraseña: <input type="password" name="c1"  minlength="8" maxlength="16" required>
+            <p></p> 
+            <p>Confirmar contraseña: <input type="password" name="c2"  minlength="8" maxlength="16" required></p>
+            <p></p>
+            <p><input type='submit' value='Confirmar'></p>
+          </div>
+    </div>
+    </form>
+{% endblock %}

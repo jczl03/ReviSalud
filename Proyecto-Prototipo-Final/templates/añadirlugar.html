@@ -1,0 +1,19 @@
+{% extends "layout2.html" %}
+{% block title %}Generar citas{% endblock %}
+{% block content%}
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h1 >Añada Lugar</h1>
+            <hr class="my-4">
+            <p>Escriba el nombre del lugar donde se realizarán las citas médicas</p>
+            <form action="#" method="POST">
+            <p></p>
+            <label for="lugar">Lugar: </label>
+            <input type="text" name="lugar" minlength="2" required>
+            <p></p>
+            <input type='submit' value='Confirmar'>
+            </form>
+          </div>
+    </div>
+    
+{% endblock %}

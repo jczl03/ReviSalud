@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content%}
+    <div class='container p-5'>
+        <div class='jumbotron'>
+            <h1 class="display-4"><b>Inicio Sesión</b></h1>
+            <hr class="my-4">
+            <form action="/loggin">
+                Usuario(cc): <input type='text' name='username' required><br>
+                <p></p>
+                Contraseña: <input type='password'  name='password'  minlength="8" maxlength="16" required><br>     
+                <p></p>       
+                <input type='submit' value='Iniciar Sesión'>         
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout4.html" %}
+{% block title %}Añadir Nota Medica{% endblock %}
+{% block content%}
+<form action="{{ url_for('notamedica',medic=medic) }}" method="POST">
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h2 class="display-4"><b>Añadir Nota Medica</b></h2>
+            <input type="hidden" name="medico" value="{{ medic }}"><br>
+            <p></p>
+            <b>Usuario (cc)</b> <input type="text" name="cedula" required><br>
+            <p></p>
+            <b>Motivo:</b> <br>
+            <textarea name="motivo" rows="7" style="width: 100%;"></textarea>
+            <p></p>
+            <b>Revisión Por Sistemas:</b><br>
+            <textarea name="revision" rows="7" style="width: 100%;"></textarea>
+            <p></p>
+            <b>Examen:</b> <br>
+            <textarea name="examen" rows="7" style="width: 100%;"></textarea>
+            <p></p>
+            <b>Diagnostico:</b> <br>
+            <textarea name="diagnostico" rows="7" style="width: 100%;"></textarea>
+            <p></p>
+            <b>Tratamiento:</b><br>
+            <textarea name="tratamiento" rows="7" style="width: 100%;"></textarea>
+            <p></p>
+            <input type='submit' value='Confirmar'>
+          </div>
+    </div>
+    </form>
+{% endblock %}

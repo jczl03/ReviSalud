@@ -1,0 +1,43 @@
+{% extends "layout4.html" %}
+{% block title %}Historia Clínica{% endblock %}
+{% block content%}
+<div class="container p-5">
+    <div class="jumbotron" >
+        <h1 class="display-4"><b>Modificar Historia Clínica</b></h1>
+        <hr class="my-4">
+        <h2>¿Que Quieres Hacer?</h2>
+        <div style="display:flex;justify-content:space-evenly;margin-top: 4vh;">
+            <div style="width: 44%; ">
+                <a style="width: 99%;height: 100%;" class="btn btn-primary btn-lg" href="/añadir_nota_medica{{ medic }}" role="button">
+                    <img style="height: 100px;width: 100px;margin:12px;"src="static/images/añadirnota.png" alt="calendario" >
+                    <container style="">
+                        <h2>Añadir nota médica</h2>
+                        <p >Añada una nota médica con varios parámetros a un paciente ingresando su cc.</p>
+                    </container>
+                </a>
+            </div>
+            <div style="width: 44%;">
+                <a style="width: 99%;height: 100%;"class="btn btn-primary btn-lg" href="/añadirantecedente{{ medic }}" role="button">
+                    <img style="height: 100px;width: 100px;margin:12px;"src="static/images/historiaclinica.png" alt="calendariomas" >
+                    <container style="">
+                        <h2>Añadir Antecedente</h2>
+                        <p >Añada un tipo de antecedente y detalle a un paciente ingresando su cc.</p>
+                    </container>
+                </a>
+            </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-evenly;margin-top: 4vh;">
+            <div style="width: 44%; ">
+                <a style="width: 99%;height: 100%;" class="btn btn-primary btn-lg" href="/editartallaypeso{{ medic }}" role="button">
+                    <img style="height: 100px;width: 100px;margin:12px;"src="static/images/editar.png" alt="cambiarcontraseña" >
+                    <container style="">
+                        <h2>Editar Talla y Peso</h2>
+                        <p >Edite la talla y el peso de un usuario ingresando su cc.</p>
+                    </container>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

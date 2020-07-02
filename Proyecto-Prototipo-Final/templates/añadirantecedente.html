@@ -1,0 +1,19 @@
+{% extends "layout4.html" %}
+{% block title %}Edit Talla y Peso{% endblock %}
+{% block content%}
+<form action="/antecedenteañadido{{ medic }}" >
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h2 class="display-4"><b>Añadir Antecedente</b></h2>
+            <p></p>
+            <b>Usuario (cc):</b> <input type="text" name="cedula"><br>
+            <p></p>
+            Tipo de Antecedente: <input type="text" name="patologico" size="50" required> 
+            <p></p>
+            Detalle: <input type="text" name="detalle" size="50">
+            <p></p>
+            <input type='submit' value='Confirmar'>
+          </div>
+    </div>
+    </form>
+{% endblock %}

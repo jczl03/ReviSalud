@@ -1,0 +1,18 @@
+{% extends "layout4.html" %}
+{% block title %}Generar citas{% endblock %}
+{% block content%}
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h1 >Cambio de contraseña</h1>
+            <hr class="my-4">
+            <p>Digite su actual contraseña para realizar el cambio</p>
+            <form action='/home_mediccambiarcontraseñanuevacontraseña{{ medic }}' method="POST">
+            <p></p>
+            <label for="contra">Contraseña: </label>
+            <input type="password" name="contra" minlength="8" maxlength="16">
+            <p></p>
+            <input type='submit' value='Confirmar'>
+            </form>
+          </div>
+    </div>
+{% endblock %}

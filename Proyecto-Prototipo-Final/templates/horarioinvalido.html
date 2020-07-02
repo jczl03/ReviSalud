@@ -1,0 +1,11 @@
+{% extends "layout4.html" %}
+{% block title %}Error{% endblock %}
+{% block content%}
+<div class="jumbotron">
+    <h1 class="display-4">Error!</h1>
+    <p class="lead">Cita creada incorrectamente</p>
+    <hr class="my-4">
+    <p>La cita no ha podido ser creada debido a que en ese horario ya tiene una cita programada</p>
+    <a class="btn btn-primary btn-lg" href="/añadircita{{ medic }}" role="button">Intentar de Nuevo</a>
+  </div>
+{% endblock %}

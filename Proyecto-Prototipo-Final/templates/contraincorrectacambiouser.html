@@ -1,0 +1,11 @@
+{% extends "layout3.html" %}
+{% block title %}Contraseña incorrecta{% endblock %}
+{% block content%}
+<div class="jumbotron">
+    <h1 class="display-4">Upps!</h1>
+    <p class="lead">Contraseña incorrecta</p>
+    <hr class="my-4">
+    <p>Digite nuevamente su contraseña, en caso de error comunicarse con soporte téctico</p>
+    <a class="btn btn-primary btn-lg" href="/home_usercambiarcontraseña{{ cc }}" role="button">Intentar nuevamente</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Upps{% endblock %}
+{% block content%}
+<div class="jumbotron">
+    <h1 class="display-4">Upps!</h1>
+    <p class="lead">Al parecer este usuario ya ha creado una contraseña para la cc {0}</p>
+    <hr class="my-4">
+    <p>Si usted es la persona con esta identificación, pero no fue usted quien se registró, por favor comuniquese con su IPS</p>
+    <a class="btn btn-primary btn-lg" href="/registro" role="button">Intentar de nuevo</a>
+  </div>
+{% endblock %}

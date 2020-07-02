@@ -1,0 +1,20 @@
+{% extends "layout3.html" %}
+{% block title %}Crear Contraseña{% endblock %}
+{% block content%}
+<form action='/home_usercambiarcontraseñacambiocontraseña{{ cc }}' method="post" >
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h1 >Cambio de Contraseña</h1>
+            <hr class="my-4">
+            <p>Digite su nueva contraseña y confirmela</p>
+            <label for="nueva">Contraseña: </label>
+            <input type="password" name="nueva"  minlength="8" maxlength="16" required>
+            <p></p> 
+            <label for="nueva2">Confirmar contraseña: </label>
+            <input type="password" name="nueva2"  minlength="8" maxlength="16" required>
+            <p></p>
+            <p><input type='submit' value='Confirmar'></p>
+          </div>
+    </div>
+    </form>
+{% endblock %}

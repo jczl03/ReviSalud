@@ -1,0 +1,26 @@
+{% extends "layout4.html" %}
+{% block title %}Añadir cita{% endblock %}
+{% block content%}
+<form action="{{ url_for('añadir_citas2',medic=medic) }}" method="POST">
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h1 >Añada una cita de acuerdo a su disponibilidad</h1>
+            <hr class="my-4">
+            <input type="hidden" name="medico" value="{{ medic }}">
+            <label for="fecha">Fecha: </label>
+            <input type="date" name="fecha" required><br>
+            <p></p>
+            <label for="hora">Hora Inicio: </label>
+            <input type="time" name="hora" required><br>
+            <p></p> 
+            <label for="hora2">Hora Final: </label>
+            <input type="time" name="hora2" required><br>
+            <p></p>
+            <label for="lugar">Lugar: </label>
+            {0}
+            <p></p>
+            <input type='submit' value='Suministrar Datoss'>
+          </div>
+    </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Upps{% endblock %}
+{% block content%}
+<div class="jumbotron">
+    <h1 class="display-4">Upps!</h1>
+    <p class="lead">Al parecer hay una incongruencia entre los datos ingresados y los existentes en la base de datos</p>
+    <hr class="my-4">
+    <p>Si considera que es un error, por favor comuniquese con su IPS</p>
+    <a class="btn btn-primary btn-lg" href="/registro" role="button">Intentar de nuevo</a>
+  </div>
+{% endblock %}

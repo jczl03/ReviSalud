@@ -1,0 +1,20 @@
+{% extends "layout4.html" %}
+{% block title %}Cita Creada{% endblock %}
+{% block content%}
+<div class="jumbotron">
+    <h1 class="display-4">Ups!</h1>
+    <p>Al parecer algunas citas en los intervalos dados no son válidos</p>
+    <hr class="my-4">
+    <p class="lead">Citas Generadas Correctamente</p>
+    <p>Las siguientes citas han sido generadas correctamente: </p>
+    <div>
+        {0}
+    </div>
+    <hr class="my-4">
+    <p class="lead">Citas no Generadas Correctamente</p>
+    <p>Las siguientes citas <b>NO</b> han sido generadas correctamente: </p>
+    <div>
+        {1}
+    </div>
+  </div>
+{% endblock %}

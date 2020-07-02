@@ -1,0 +1,31 @@
+{% extends "layout3.html" %}
+{% block title %}Home{% endblock %}
+{% block content%}
+    <div class="container p-5">
+        <div class="jumbotron" >
+            <h1 class="display-4"><b>Información Personal:</b></h1>
+            <hr class="my-4">
+            <p>Nombres y apellidos: {0}</p>
+            <p>Cédula: {1}</p>
+            <p>Sexo: {2}</p>
+            <p>Fecha de nacimiento: {3}</p>
+            <p>Edad: {4}</p>
+            <p>Telefono: {5}</p>
+            <p>Ciudad: {6}</p>
+            <p>Direccion: {7}</p>
+            <p>Peso: {8}</p>
+            <p>Talla: {9}</p>
+        </div>
+    </div>
+    <div class="container p-5">
+        <div class="jumbotron" >
+            <h1 class="display-4"><b>Antecedentes</b></h1>
+            <hr class="my-4">
+            <container>{11}</container>
+            <hr class="my-4">
+            <h1 class="display-4"><b>Historía Clínica</b></h1>
+            <hr class="my-4">
+            <container>{10}</container>
+        </div>
+    </div>
+{% endblock %}

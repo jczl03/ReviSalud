@@ -1,0 +1,17 @@
+{% extends "layout3.html" %}
+{% block title %}Cita agendada{% endblock %}
+{% block content%}
+    <div class="container p-5">
+        <div class="jumbotron" >
+            <h1 class="display-4"><b>Agendamiento realizado correctamente!</b> </h1>
+            <hr class="my-4">
+            <h2>Su cita ha sido agendada con las siguientes características: </h2>
+            <p>Médico: {0}</p>
+            <p>Especialidad: {1}</p>
+            <p>Fecha: {2}</p>
+            <p>Hora Inicio Cita: {3}</p>
+            <p>Hora Final Cita: {4}</p>
+            <p>Lugar: {5}</p>
+        </div>
+    </div>
+{% endblock %}

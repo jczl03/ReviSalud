@@ -1,0 +1,15 @@
+{% extends "layout4.html" %}
+{% block title %}Historia Clínica{% endblock %}
+{% block content%}
+<div class="container p-5">
+    <div class="jumbotron" >
+        <h1 class="display-4"><b>Ingrese la cc del paciente para ver su historia médica</b></h1>
+            <hr class="my-4">
+            <form action="/verhistoriaclinica{{ medic }}">
+                Usuario(cc): <input type='text' name='username'><br>  
+                <p></p>
+                <input type='submit' value='Confirmar'>        
+            </form>
+    </div>
+</div>
+{% endblock %}

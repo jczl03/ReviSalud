@@ -1,0 +1,30 @@
+{% extends "layout4.html" %}
+{% block title %}Generar citas{% endblock %}
+{% block content%}
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h1 style="text-align:center;">Genere un conjunto de citas en un intervalo de fechas y de horas</h1>
+            <hr class="my-4">
+            <form action="{{ url_for('citas_generadas',medic=medic) }}" method="POST">
+            <label for="fecha">Fecha Inicio: </label>
+            <input type="date" name="fecha" style="margin-right:40px;">
+            <label for="fechafin">Fecha Fin: </label>
+            <input type="date" name="fechafin" >
+            <p></p>
+            <label for="horai">Hora Inicio: </label>
+            <input type="time" name="horai" style="margin-right:110px;">
+            <label for="limite">Hora Final: </label>
+            <input type="time" name="limite">
+            <p></p>
+            <label for="lugar">Lugar: </label>
+            {0}
+            <p></p>
+            <label for="intervalo">Intervalo de duración de las citas (En minutos): </label>
+            <input type="number" name="intervalo">
+            <p></p>
+            <input type='submit' value='Suministrar Datos'>
+            </form>
+          </div>
+    </div>
+    
+{% endblock %}

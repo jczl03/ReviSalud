@@ -1,0 +1,33 @@
+{% extends "layout2.html" %}
+{% block title %}Añadir Usuario{% endblock %}
+{% block content%}
+<form action="/verificar_datos">
+    <div class="container p-5">
+        <div class="jumbotron" align="justify">
+            <h2 ><b>Añadir Usuario</b></h2>
+            <hr class="my-4">
+            Nombres: <input type="text" name="nombres"><br>
+            <p></p>
+            Apellidos: <input type="text" name="apellidos"><br>
+            <p></p> 
+            Cédula de ciudadania: <input type="text" name="cc"><br>
+            <p></p>
+            <p>Sexo:
+            <input type="radio" id="Masculino" name="sexo" value="Masculino">
+            <label for="Masculino">Masculino</label>
+            <input type="radio" id="Femenino" name="sexo" value="Femenino">
+            <label for="Femenino">Femenino</label> </p>
+            <p></p>
+            Fecha de nacimiendo (mm/dd/aaaa): <input type="date" name="fecha_nacimiento" required><br>
+            <p></p>
+            Telefono: <input type="text" name="telefono"><br>
+            <p></p>
+            Ciudad Residencia: <input type="text" name="ciudad"><br>
+            <p></p>
+            Direccion: <input type="text" name="direccion"><br>
+            <p></p>
+            <input type='submit' value='Suministrar Datos'>
+          </div>
+    </div>
+    </form>
+{% endblock %}
