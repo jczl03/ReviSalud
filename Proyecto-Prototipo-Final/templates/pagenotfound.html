@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Page Not found</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main2.css')  }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')  }}">
 </head>
 
-<body> 
-    <div class="page-wrapper">
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a href="#"><img class="logoname"src="static/images/name.png" alt="name" ></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -21,32 +20,28 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/admin">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/usuarios">Usuarios</a>
+                    <a class="nav-link" href="/log_inmedic">Personal Médico</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/personalmedico">Personal Médico</a>
+                    <a class="nav-link" href="/log_in">Usuarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/añadirlugar">Añadir Lugar</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/añadirespecialidad">Añadir Especialidad</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="/admincambiarcontraseña">Cambiar Contraseña</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/">Cerrar Sesión</a>
+                    <a class="nav-link" href="/registro">Registrarse</a>
                 </li>
             </ul>
         </div>
     </nav>
-        {% block content %}
-        {% endblock %}
+    <div class="page-wrapper">
+        <div class="jumbotron">
+            <h1 class="display-4">Upps!</h1>
+            <p class="lead">Page Not found</p>
+            <hr class="my-4">
+            <p>Esta página no existe, por favor verifique, si considera necesario, comuniquese con soporte técnico</p>
+            <a class="btn btn-primary btn-lg" href="/" role="button">Inicio</a>
+          </div>
     </div>
 </body>
 
@@ -62,7 +57,7 @@
             </ul>
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12" style="display: block;
-        padding-top: 11px;
+        padding-top: 10px;
         padding-bottom: auto;">
             <img class="logorevisalud"src="static/images/logo.png" alt="logo" >
         </div>

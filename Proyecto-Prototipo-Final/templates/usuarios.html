@@ -1,0 +1,31 @@
+{% extends "layout2.html" %}
+{% block title %}Home-Admin{% endblock %}
+{% block content%}
+<div class="container p-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Usuarios</h1>
+        <hr class="my-4">
+        <h2>¿Que Quieres Hacer?</h2>
+        <div style="display:flex;justify-content:space-evenly;margin-top: 4vh;">
+            <div style="width: 44%; ">
+                <a style="width: 99%;height: 100%;" class="btn btn-primary btn-lg" href="/verusuarios" role="button">
+                    <img style="height: 100px;width: 100px;margin:12px;" src="static/images/user.png" alt="user">
+                    <container style="">
+                        <h2>Ver Usuarios</h2>
+                        <p>Mire los datos de los usuarios (pacientes) de la clínica.</p>
+                    </container>
+                </a>
+            </div>
+            <div style="width: 44%;">
+                <a style="width: 99%;height: 100%;" class="btn btn-primary btn-lg" href="/crear_usuario" role="button">
+                    <img style="height: 100px;width: 100px;margin:12px;" src="static/images/add.png" alt="add">
+                    <container style="">
+                        <h2>Añadir usuarios</h2>
+                        <p>Añada usuarios (pacientes).</p>
+                    </container>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
