@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template,redirect,url_for #Se importan las liberias de flask   
+from flask import Flask, request, render_template,redirect,url_for 
 import datetime  #Esta libreria funciona para manejar el tema de fechas
 from datetime import date, time,datetime,timedelta
 app = Flask(__name__) #Aqui se crea la variable sobre la que estarán el resto de rutas 
@@ -166,6 +166,38 @@ def vercitas(cc):
         citas.append("</table></container>")
         t="".join(citas)
     return render_template('citasdisponibles.html',cc=cc).format(t)
+@app.route('/usuarios')
+def usuarios():
+    return render_template('usuarios.html')
+@app.route('/verusuarios')
+def verusuarios():
+    tabla=[]
+    for x in datos_personales:
+        n=datos_personales[x]
+        sexo=n[3][0]
+        tabla.append(render_template('tablausuarios.html').format(n[2],n[1],n[0],sexo,n[4],n[5],n[6],n[7]))
+    if tabla==[]:
+        tabla="<h3>Aún no hay usuarios registrados</h3>"
+    else:
+        tabla.sort()
+        tabla='<container ><table border WIDTH="990" ><tr><th>Cédula</th><th>Apellidos</th><th>Nombres</th><th>Sexo</th><th>Fecha de Nacimiento</th><th>Telefono</th><th>Ciudad:</th><th>Dirección</th></tr>'+"".join(tabla)+"</table></container>"
+    return render_template('verusuarios.html').format(tabla)
+@app.route('/personalmedico')
+def personalmedico():
+    return render_template('personalmedico.html')
+@app.route('/verpersonal_medico')
+def vermedicos():
+    tabla=[]
+    for x in personal_medico:
+        n=personal_medico[x]
+        sexo=n[3][0]
+        tabla.append(render_template('tablamedicos.html').format(n[2],n[4],n[1],n[0],sexo))
+    if tabla==[]:
+        tabla="<h3>Aún no hay personal médico registrado</h3>"
+    else:
+        tabla='<container ><table border WIDTH="990" ><tr><th>Cédula</th><th>Especialidad</th><th>Apellidos</th><th>Nombres</th><th>Sexo</th></tr>'+"".join(tabla)+"</table></container>"
+    return render_template('vermedicos.html').format(tabla)
+
 @app.route('/citas-disponibles<cc>', methods=["POST","GET"]) #Filtro para las citas
 def citas_filtradas(cc):
     if request.method=="POST":
@@ -623,7 +655,10 @@ def crear_medico():
 def ver_datosm():
         nombre=request.args['nombres'].strip().upper()
         apellidos=request.args['apellidos'].strip().upper()
-        cc=request.args['cc'].strip()
+        try:
+            cc=str(int(request.args['cc'].strip()))
+        except:
+            return render_template('usuariomalcreado.html')
         sexo=request.args['sexo'].strip().upper()
         especialidad=request.args['especialidad'].strip().upper()
         if cc not in personal_medico:
@@ -637,13 +672,18 @@ def ver_datosm():
 @app.route('/verificar_datosm')
 def verificar_datosm():
     return ver_datosm()
+
 def ver_datos():
         nombre=request.args['nombres'].strip().upper()
         apellidos=request.args['apellidos'].strip().upper()
-        cc=request.args['cc'].strip()
         sexo=request.args['sexo'].strip().upper()
         fecha_nacimiento=str(request.args['fecha_nacimiento'])
-        telefono=request.args['telefono'].strip()
+        try:
+            cc=str(int(request.args['cc'].strip()))
+            telefono=str(int(request.args['telefono'].strip()))
+        except:
+            return render_template('usuariomalcreado.html')
+
         ciudad_residencia=request.args['ciudad'].strip().upper()
         residencia=request.args['direccion'].strip().upper()
         if cc not in datos_personales :
@@ -653,12 +693,16 @@ def ver_datos():
             citas_pacientes[cc]=[]
             return render_template('usuariocreadobien.html')
         else:
-            return render_template('usuariorepetido.html').format(cc)
- #   except:
-#        return render_template('usuariomalcreado.html') 
+            return render_template('usuariorepetido.html').format(cc)         
 @app.route('/verificar_datos')
 def verificar_datos():
     return ver_datos()
+@app.errorhandler(500)
+def error(err):
+    return render_template('internalservererror.html'),500
+@app.errorhandler(404)
+def error(err):
+    return render_template('pagenotfound.html'),404
 
 if __name__ == "__main__":
     app.run(debug=True)
