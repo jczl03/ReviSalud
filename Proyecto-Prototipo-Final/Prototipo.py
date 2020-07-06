@@ -420,7 +420,7 @@ def ver_historia_clinica(medic):
         talla=historia_clinica[cc]["altura"]
         if talla==None:
             talla="<i>No especifica</i>"
-        return render_template('verhistoriamedica-medic.html', cc=cc).format(a,cc,datos_personales[cc][3],datos_personales[cc][4],edad_usuario(datos_personales,cc),datos_personales[cc][5],datos_personales[cc][6],datos_personales[cc][7],peso,talla,nm,antecedentes)
+        return render_template('verhistoriamedica-medic.html', medic=medic).format(a,cc,datos_personales[cc][3],datos_personales[cc][4],edad_usuario(datos_personales,cc),datos_personales[cc][5],datos_personales[cc][6],datos_personales[cc][7],peso,talla,nm,antecedentes)
     else:
         return render_template('pacientenoregistrado.html',medic=medic).format(cc)
 @app.route('/loggin') #Aqui se viene despues de el loggin de usuario, con las 3 posibilidades
