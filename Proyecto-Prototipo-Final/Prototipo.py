@@ -9,8 +9,8 @@ personal_medico={} #Aquí irían los datos de cada médico, que el admin agregar
 contra_medicos={} #Aquí iria la contraseña de los médicos funcionando de forma literalmente identica a la de los users
 citas_pacientes={}
 citas_medicos={}
-lugares={"SALA 1":{}}
-especialidades={"MEDICO GENERAL":True}
+lugares={}
+especialidades={}
 hora_inicio_jornada="00:00"
 hora_final_jornada="23:59"
 def sumatime(hora1,tiempo):
@@ -655,8 +655,9 @@ def crear_medico():
 def ver_datosm():
         nombre=request.args['nombres'].strip().upper()
         apellidos=request.args['apellidos'].strip().upper()
+        cc=str(request.args['cc'].strip())
         try:
-            cc=str(int(request.args['cc'].strip()))
+            int(cc)
         except:
             return render_template('usuariomalcreado.html')
         sexo=request.args['sexo'].strip().upper()
@@ -678,9 +679,11 @@ def ver_datos():
         apellidos=request.args['apellidos'].strip().upper()
         sexo=request.args['sexo'].strip().upper()
         fecha_nacimiento=str(request.args['fecha_nacimiento'])
+        cc=str(request.args['cc'].strip())
+        telefono=str(request.args['telefono'].strip())
         try:
-            cc=str(int(request.args['cc'].strip()))
-            telefono=str(int(request.args['telefono'].strip()))
+            int(cc)
+            int(telefono)
         except:
             return render_template('usuariomalcreado.html')
 
